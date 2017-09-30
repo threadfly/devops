@@ -1,0 +1,33 @@
+{
+    "app": {
+        "name": "/NS/unet/set1000009/UNetFE/0",
+        "addr": "172.28.38.236"
+    },
+    "tcp": {
+        "listen_addr": "0.0.0.0",
+        "listen_port": 50010
+    },
+    "http": {
+        "listen_addr": "0.0.0.0",
+        "listen_port": 5001
+    },
+    "log": {
+        "LogDir": "log",
+        "LogPrefix": "unetfe",
+        "LogSuffix": ".log",
+        "LogSize": 50,
+        "LogLevel": "DEBUG"
+    },
+    "zookeeper": {
+        "server": ""
+    },
+    "names": {
+        "ubill_access": "/NS/region1/ubill-proxy/ubill_proxy_set0"
+    },
+    "dbconfig": {
+        "unetwork": "",
+        "uthroughput": ""
+    },
+    "private_api": "http://internal.api.threadfly.cn",
+	"AuthKey": "c0fe74e83d9140db"
+}

@@ -1,0 +1,124 @@
+{
+	"global": {
+		"configname" : "config.json",
+		"configpath" : "/data/unetfe/conf/",
+		"replace": [
+			{
+				"repname": "privateapiurl",
+				"repvalue": "http://internal.api.pre.threadflyadmin.com"
+			},
+			{
+				"repname": "authkey",
+				"repvalue": "c0fe74e83d9140db"
+			}
+		]
+	},
+	"local":[
+		{
+			"remoteip" : "192.168.153.95",
+			"replace": [
+				{
+					"repname": "zkname",
+					"repvalue": "/NS/unet/set666888/UNetFE/0"
+				},
+				{
+					"repname": "zkaddr",
+					"repvalue": "192.168.153.88:2181,192.168.153.89:2181,192.168.153.90:2181"
+				},
+				{
+					"repname": "tcpport",
+					"repvalue": "50010"
+				},
+				{
+					"repname": "httpport",
+					"repvalue": "5001"
+				},
+				{
+					"repname": "ip",
+					"repvalue": "192.168.153.94"
+				},
+				{
+					"repname": "zkubill",
+					"repvalue": "/NS/region1/ubill-proxy/ubill_proxy_set0"
+				},
+				{
+					"repname": "zkumonitor",
+					"repvalue": "/NS/umonitor2/set1/access"
+				},
+				{
+					"repname": "zkuvpcfe",
+					"repvalue": "/NS/unet/set666888/UVPCFEProxy"
+				},
+				{
+					"repname": "zkcnatedata",
+					"repvalue": "/NS/unet/set666888/CNatDataAPI"
+				},
+				{
+					"repname": "zkulb4",
+					"repvalue": "/NS/ulb/set666888/ULB4Manager"
+				},
+				{
+					"repname": "dbunetwork",
+					"repvalue": "threadfly:threadfly.cn@tcp(192.168.154.1:3306)/unetwork?charset=utf8"
+				},
+				{
+					"repname": "dbuthroughput",
+					"repvalue": "threadfly:threadfly.cn@tcp(192.168.154.1:3306)/uthroughput?charset=utf8"
+				}
+			]
+		},
+		{	
+			"remoteip" : "localhost",
+			"replace": [
+				{
+					"repname": "zkname",
+					"repvalue": "111111111111"
+				},
+				{
+					"repname": "zkaddr",
+					"repvalue": "222222222222"
+				},
+				{
+					"repname": "tcpport",
+					"repvalue": "333333333333"
+				},
+				{
+					"repname": "httpport",
+					"repvalue": "444444444444"
+				},
+				{
+					"repname": "ip",
+					"repvalue": "555555555555"
+				},
+				{
+					"repname": "zkubill",
+					"repvalue": "666666666666"
+				},
+				{
+					"repname": "zkumonitor",
+					"repvalue": "777777777777"
+				},
+				{
+					"repname": "zkuvpcfe",
+					"repvalue": "888888888888"
+				},
+				{
+					"repname": "zkcnatedata",
+					"repvalue": "999999999999"
+				},
+				{
+					"repname": "zkulb4",
+					"repvalue": "aaaaaaaaaaaa"
+				},
+				{
+					"repname": "dbunetwork",
+					"repvalue": "bbbbbbbbbbbb"
+				},
+				{
+					"repname": "dbuthroughput",
+					"repvalue": "cccccccccccc"
+				}
+			]
+		}
+	]
+}

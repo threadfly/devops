@@ -1,0 +1,37 @@
+{
+    "app": {
+        "name": "%{zkname}",
+        "addr": "%{ip}"
+    },
+    "tcp": {
+        "listen_addr": "0.0.0.0",
+        "listen_port": %{tcpport}
+    },
+    "http": {
+        "listen_addr": "0.0.0.0",
+        "listen_port": %{httpport}
+    },
+    "log": {
+        "LogDir": "log",
+        "LogPrefix": "api_example",
+        "LogSuffix": ".log",
+        "LogSize": 50,
+        "LogLevel": "DEBUG"
+    },
+    "zookeeper": {
+        "server": "%{zkaddr}"
+    },
+    "names": {
+        "ubill_access": "%{zkubill}",
+		"umonitor": "%{zkumonitor}",
+		"uvpcfe": "%{zkuvpcfe}",
+		"ulb4_manager": "%{zkulb4}",
+		"cnat_data_api": "%{zkcnatedata}"
+    },
+    "dbconfig": {
+        "unetwork": "%{dbunetwork}",
+        "uthroughput": "%{dbuthroughput}"
+    },
+    "private_api": "%{privateapiurl}",
+	"AuthKey": "%{authkey}"
+}
