@@ -1,0 +1,56 @@
+{
+	"app": {
+	    "httpname": "/NS/unet/UNetHawkeyeHttp/%{id}",
+	    "pbname": "/NS/unet/UNetHawkeyePb/%{id}",
+	    "addr": "%{tcp_ip}"
+	},
+	"http": {
+	    "listen_addr": "0.0.0.0",
+	    "listen_port": %{http_port}
+	},
+	"tcp": {
+	    "listen_addr": "0.0.0.0",
+	    "listen_port": %{tcp_port}
+	},
+	"log": {
+	    "LogDir": "log",
+	    "LogPrefix": "unethawkeye",
+	    "LogSuffix": ".log",
+	    "LogSize": 50,	
+	    "LogLevel": "%{log_level}"
+	},
+	"zookeeper": {
+		"server": "%{zk_server_list}"
+	},
+    	"names": {
+		"UMonitor2Server": "/NS/umonitor2/set1/access",
+		"UMonitor2InnerServer": "/NS/inner_umonitor2/set1/access",
+		"UMonitorWarning": "/NS/ums/set1/access"
+	},
+    	"dbconfig": {
+		"unetwork": "%{unetwork_dburl}"
+    	},
+	"migration": {
+		"redis_db": 15,
+		"redis_ip": "%{redis_ip}",
+		"redis_port": %{redis_port},
+		"redis_pool": %{redis_pool_size},
+		"report_mode": "%{migration_report_mode}",
+		"lock_timeout": %{lock_timeout_min}
+	},
+	"warning": {
+		"ip": "%{warning_ip}",
+		"port": %{warning_port},
+		"authkey": %{warning_authkey},
+		"email": [
+			"%{warning_email_1}",
+			"%{warning_email_2}",
+			"%{warning_email_3}"
+		],
+		"convergenceURL": "http://internal.api.threadfly.cn/api/v1/collector/raw_message"
+	},
+	"pychecker":{
+		"host_ip": "%{checker_host_ip}"
+	},
+    	"region": %{region_id}
+}

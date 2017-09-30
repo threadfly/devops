@@ -1,0 +1,24 @@
+#!/bin/bash
+#build project image
+
+project=%{server_type}; shift
+new_project=$(tr '[A-Z]' '[a-z]' <<< "$project")
+new_tag="%{exec_name}_`date +\"%Y%m%d%H%M\"`"
+
+## 现在本地制作镜像
+PRE_IMAGEADDR="preugistry.service.threadfly.cn/netinfrad/${new_project}:${new_tag}"
+docker build -t "$PRE_IMAGEADDR" .
+
+## 推送到预发布镜像仓库
+docker push $PRE_IMAGEADDR
+
+
+## 制作用于线上的镜像
+ONLINE_IMAGEADDR="ugistry.service.threadfly.cn/netinfrad/${new_project}:${new_tag}"
+docker tag $PRE_IMAGEADDR $ONLINE_IMAGEADDR
+
+docker push $ONLINE_IMAGEADDR
+
+echo "${ONLINE_IMAGEADDR}"
+
+

@@ -1,0 +1,10 @@
+{
+	"addr":"%{tcp_ip}",
+	"internalApigateway":"%{internal_api_gateway}",
+	"apiHost":"%{api_host}",
+	"mysql":"%{mysql}/unetwork",
+	"lines": ["cn-bj2,cn-gd", "cn-bj2,hk", "cn-bj2,cn-sh2", "cn-gd,hk", "cn-gd,cn-sh2", "hk,cn-sh2", "cn-bj2,us-ca"],
+	"bj_nets": "10.10.0.0/16,10.9.0.0/16,10.19.0.0/16",
+	"sh_nets": "10.23.0.0/16,10.25.0.0/16,10.15.0.0/16",
+	"hk_nets": "10.8.0.0/16"
+}

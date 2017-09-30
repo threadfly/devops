@@ -1,0 +1,55 @@
+{
+	"app": {
+        "httpname": "/NS/unet/UNetHawkeyeHttp/0",
+        "pbname": "/NS/unet/UNetHawkeyePb/0",
+	    "addr": "192.168.153.95"
+	},
+	"http": {
+	    "listen_addr": "0.0.0.0",
+	    "listen_port": 8081
+	},
+	"tcp": {
+	    "listen_addr": "0.0.0.0",
+	    "listen_port": 8001
+	},
+	"log": {
+	    "LogDir": "log",
+	    "LogPrefix": "unethawkeye",
+	    "LogSuffix": ".log",
+	    "LogSize": 50,	
+	"log": {
+	    "LogDir": "log",
+	    "LogPrefix": "unethawkeye",
+	    "LogSuffix": ".log",
+	    "LogSize": 50,	
+	    "LogLevel": "DEBUG"
+	},
+	"zookeeper": {
+        "server": "192.168.153.88:2181,192.168.153.89:2181,192.168.153.90:2181"
+    },
+    "names": {
+        "UMonitor2Server": "/NS/umonitor2/set1/access",
+        "UMonitor2InnerServer": "/NS/inner_umonitor2/set1/access",
+		"UMonitorWarning": "/NS/ums/set1/access"
+	},
+    "dbconfig": {
+    },
+	"migration": {
+		"redis_db": 15,
+		"redis_ip": "192.168.153.120",
+		"redis_port": 6379,
+		"redis_pool": 100,
+		"report_mode": "day",
+		"lock_timeout": 0.5
+	},
+	"warning": {
+		"ip": "192.168.153.74",
+		"port": 6507,
+		"authkey": 545936616,
+		"email": [
+			"rick.wu@threadfly.cn"
+		],
+		"convergenceURL": "http://internal.api.threadfly.cn/api/v1/collector/raw_message"
+	},
+    "region": 666888
+}

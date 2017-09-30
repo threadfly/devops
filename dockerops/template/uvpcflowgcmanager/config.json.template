@@ -1,0 +1,33 @@
+{
+	"app": {
+        "name": "/NS/unet/UVPCFlowGCManager/%{id}",
+	    "addr": "%{tcp_ip}"
+	},
+    "tcp": {
+	    "listen_addr": "0.0.0.0",
+	    "listen_port": %{tcp_port}
+    },
+	"http": {
+	    "listen_addr": "0.0.0.0",
+	    "listen_port": %{http_port}
+	},
+	"log": {
+	    "LogDir": "log",
+        "LogPrefix": "uvpcflowgcmanager",
+	    "LogSuffix": ".log",
+	    "LogSize": 50,	
+	    "LogLevel": "%{log_level}"
+	},
+	"zookeeper": {
+		"server": "%{zk_server_list}"
+	},
+    "names": {
+        "URouteTableManager": "/NS/unet/set%{region_id}/URouteTableManager"
+	},
+    "dbconfig": {
+        "unetwork": "%{unetwork_db_user}:%{unetwork_db_passwd}@tcp(%{unetwork_db_ip}:%{unetwork_db_port})/unetwork?charset=utf8"
+    },
+    "udpn_tunid_gray": %{udpn_tunid_gray},
+    "private_api": "%{internal_api_gateway}",
+    "usdnagent_port": %{usdnagent_port} 
+}

@@ -1,0 +1,19 @@
+#Run docker container yml
+
+%{server_type}:
+    image: %{image}
+    command: /root/run.sh --region=%{region} --server=%{server_type} --type=tcp
+    container_name: %{containername}
+    ports:
+    %{tcp_port_map}
+    %{http_port_map}
+    volumes:
+    - /data/%{server_name}/log/:/root/log/
+    - /data/%{server_name}/data/:/root/data/
+    - /data/%{server_name}/conf/:/root/conf/
+    - /root/.ssh/:/root/.ssh/
+    environment:
+    - IPADDR=%{ip_addr}
+    - INSTANCEID=%{instance_id}
+    - PORTSHIFT=%{port_shift}
+    restart: always
